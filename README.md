@@ -4,6 +4,14 @@ Food delivery app (aka. iFood/Uber Eats) back-end built with TypeScript, Drizzle
 
 > 🔥 This project aims to keep runtime agnostic, this means it should work on Bun, Node, Cloudflare Workers or any Web Standard API compatible runtime.
 
+## Before running
+
+Go to `src/db/seed.ts` and change the e-mail `johndoe@example.com` for the fake e-mail you want to use on login.
+
+Create a `.env.local.` file on root folder, copying the environment variables from `.env.example` file. Change the `RESEND_API_KEY` to `RESEND_API_KEY="."` to use the fake e-mail authentication.
+
+When receiving a POST request on `/authenticate` endpoint, this app will log the authentication link (that sets the cookie) on terminal, copy this link and past it on the browser you're using to run the front-end app. 
+
 ## Running
 
 This project depends on Docker to setup database. With Docker installed, clone the project, install  dependencies, setup Docker containers and run the application.
